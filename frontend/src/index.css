@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #4b9cd3;   /* example blue */
+  --secondary-color: #f4b400; /* example yellow */
+  --dark-color: #222;
+  --light-color: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--light-color);
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
