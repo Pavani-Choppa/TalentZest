@@ -1,3 +1,13 @@
+/* Background: #1e1e2f, #121212
+
+Card Backgrounds: #2a2a40, rgba(30, 30, 47, 0.95)
+
+Primary Accent (buttons, highlights): #4da8ff (and hover #357ab8)
+
+Text: #ffffff with subtle shades for contrast
+
+Shadows: rgba(92, 132, 211, 0.6) glow effects */
+
 /* Background (Dark Theme) */
 body {
   background: linear-gradient(135deg, #1e1e2f, #121212);
