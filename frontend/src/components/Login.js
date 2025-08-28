@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import PopupMessage from "./PopupMessage";
+import Home from "./Home";
 
 
 function Login() {
@@ -8,6 +10,8 @@ function Login() {
   const [message, setMessage] = useState("");
   const [popupType, setPopupType] = useState(""); // "success" or "error"
   const [showPopup, setShowPopup] = useState(false);
+
+  const navigate = useNavigate(); // for redirecting  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +32,12 @@ function Login() {
       if (response.ok) {
         setMessage("Login successful!");
         localStorage.setItem("token", data.token); // Save token for authentication
-      } else {
+       
+        setTimeout(() => {
+          navigate("/home"); // redirect after 1 sec
+        }, 1000);
+        
+    } else {
         setMessage(data.message || "Login failed");
       }
     } catch (error) {
