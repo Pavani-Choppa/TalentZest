@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
+/* Container Background
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+rgba(30, 30, 47, 0.95) → a dark bluish gray
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+#2a2a40 → dark navy gray
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+#1f1f33 → very dark indigo
 
-.App-link {
-  color: #61dafb;
-}
+Borders & Shadows
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+rgba(255, 255, 255, 0.1) → faint white border
+
+rgba(0, 0, 0, 0.4) → black shadow
+
+rgba(92, 132, 211, 0.6) → soft blue glow shadow
+
+Text & Icons
+
+#ffffff → white text
+
+#555 → gray (for icons)
+
+#4da8ff → sky blue (primary theme color)
+
+Buttons
+
+#4da8ff → sky blue (main button background)
+
+#357ab8 → darker blue (hover state)
+
+🎨 Color Palette Extracted:
+
+Primary Accent: #4da8ff (Sky Blue)
+
+Primary Hover: #357ab8 (Deep Blue)
+
+Background Dark Shades:
+
+#2a2a40 (Navy Gray)
+
+#1f1f33 (Dark Indigo)
+
+rgba(30, 30, 47, 0.95) (Dark Bluish Overlay)
+
+Neutral Colors:
+
+#ffffff (White)
+
+#555555 (Medium Gray)
+
+Shadows & Effects:
+
+rgba(92, 132, 211, 0.6) (Blue Glow)
+
+rgba(0, 0, 0, 0.4) (Dark Shadow)
+
+rgba(255, 255, 255, 0.1) (Subtle White Border) */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Primary Blue: #4da8ff
+
+Dark Blue (hover/secondary): #357ab8
+
+Dark Background: #1f1f33
+
+Medium Dark Background: #2a2a40
+
+Card Background: rgba(30, 30, 47, 0.95)
+
+White: #ffffff
+
+Light Transparent Border: rgba(255, 255, 255, 0.1)
+
+Gray (icon): #555 */

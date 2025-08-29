@@ -1,14 +1,6 @@
-/* Background: #1e1e2f, #121212
+/*  */
 
-Card Backgrounds: #2a2a40, rgba(30, 30, 47, 0.95)
 
-Primary Accent (buttons, highlights): #4da8ff (and hover #357ab8)
-
-Text: #ffffff with subtle shades for contrast
-
-Shadows: rgba(92, 132, 211, 0.6) glow effects */
-
-/* Background (Dark Theme) */
 body {
   background: linear-gradient(135deg, #1e1e2f, #121212);
   font-family: Arial, sans-serif;
@@ -83,6 +75,26 @@ body {
   background: #357ab8;
   transform: scale(1.05);
 }
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding-right: 40px; /* space for icon */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
 
 /* Mobile View */
 @media (max-width: 500px) {

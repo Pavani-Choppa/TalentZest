@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import PopupMessage from "./PopupMessage";
-import Home from "./Home";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+// import Home from "./Home";
 
 
 function Login() {
@@ -10,11 +12,16 @@ function Login() {
   const [message, setMessage] = useState("");
   const [popupType, setPopupType] = useState(""); // "success" or "error"
   const [showPopup, setShowPopup] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate(); // for redirecting  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -66,14 +73,21 @@ function Login() {
             onChange={handleChange}
             required
           />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
+
+          <div className="password-input-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+            <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
+          </div>
+
           <button type="submit">Login</button>
         </form>
          {/* Show popup message */}

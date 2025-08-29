@@ -1,0 +1,101 @@
+/* Navbar container */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f33; /* Dark background */
+  padding: 12px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
+  position: fixed; /* stays at the very top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #ffffff; /* White links */
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Icons */
+.icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #33334d;
+  color: #fff;
+}
+
+/* Active link */
+.nav-links a.active {
+  color: #4da8ff; /* Primary Blue */
+  font-weight: 600;
+  border-bottom: 2px solid #4da8ff;
+  padding-bottom: 3px;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #357ab8; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}

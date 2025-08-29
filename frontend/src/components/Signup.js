@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PopupMessage from "./PopupMessage";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Signup.css";
 
 function Signup() {
@@ -12,9 +13,14 @@ function Signup() {
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -77,15 +83,22 @@ function Signup() {
             onChange={handleChange}
             required
           />
+
+          <div className="password-input-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              <span className="password-toggle-icon" onClick={togglePasswordVisibility}>
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </span>
+          </div>
           <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-          <input
+
             type="password"
             name="confirmPassword"
             placeholder="Confirm Password"
