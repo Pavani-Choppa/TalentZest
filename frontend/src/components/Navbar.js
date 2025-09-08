@@ -18,7 +18,7 @@ const Navbar = () => {
           alt="TalentZest Logo"
           className="logo-img"
         />
-        <span className="logo-text">TalentZest</span>
+       <a href="/home" className="logo-text">TalentZest</a>
       </div>
 
       {/* Navigation Links */}

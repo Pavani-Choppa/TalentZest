@@ -1,16 +1,18 @@
 /* Navbar container */
 .navbar {
   width: 100%;
+  height: 12%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1f1f33; /* Dark background */
-  padding: 12px 40px;
+  padding: 12px 24px; /* ✅ Reduced padding */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
   position: fixed; /* stays at the very top */
   top: 0;
   left: 0;
   z-index: 1000;
+  box-sizing: border-box; /* ✅ Prevents overflow */
 }
 
 /* Logo section */
@@ -18,6 +20,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0; /* ✅ Prevents logo from shrinking */
 }
 
 .logo-img {
@@ -36,25 +39,32 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 20px; /* ✅ Reduced gap */
   margin: 0;
   padding: 0;
+  flex: 1; /* ✅ Takes available space */
+  justify-content: flex-end; /* ✅ Aligns links to right */
+  flex-wrap: wrap; /* ✅ Prevents overflow */
 }
 
 .nav-links li {
   display: flex;
   align-items: center;
+  /* flex-shrink: 0; ✅ Prevent shrinking of items */
 }
 
 .nav-links a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 8px;
+
   font-size: 16px;
   color: #ffffff; /* White links */
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
+  /* transition: color 0.3s ease, transform 0.2s ease; */
+  white-space: nowrap; /* ✅ Keeps text in one line */
 }
 
 /* Icons */
@@ -69,6 +79,9 @@
 .nav-links a.active {
   background-color: #33334d;
   color: #fff;
+  /* margin: 10px; */
+  padding: 8px;
+  border-radius: 10px;
 }
 
 /* Active link */
@@ -76,19 +89,20 @@
   color: #4da8ff; /* Primary Blue */
   font-weight: 600;
   border-bottom: 2px solid #4da8ff;
-  padding-bottom: 3px;
+  /* padding-bottom: 10px; */
 }
 
-/* Hover effect */
-.nav-links a:hover {
-  color: #357ab8; /* Darker blue on hover */
-  transform: translateY(-2px);
-}
+
 
 /* Responsive for small screens */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 10px 16px; /* ✅ Smaller padding */
+  }
+
   .nav-links {
-    gap: 16px;
+    gap: 12px; /* ✅ Reduce gap further */
+    justify-content: center; /* ✅ Center items */
   }
 
   .logo-text {
