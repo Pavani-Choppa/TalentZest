@@ -57,8 +57,11 @@ const Home = () => {
 
           {/* CTA Buttons */}
           <div className="cta-buttons">
-            <button className="primary-btn">Browse Skills →</button>
-            <button className="secondary-btn">Offer Your Skills</button>
+            <a href="/browse">
+            <button className="primary-btn">Browse Skills →</button> </a>
+            <a href="/browse">
+
+            <button className="secondary-btn">Offer Your Skills</button> </a>
           </div>
         </div>
       </section>

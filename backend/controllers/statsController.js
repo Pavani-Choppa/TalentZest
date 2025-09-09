@@ -1,17 +1,21 @@
-import Stats from "../models/Stats.js";
+const Stats = require("../models/Stats");
 
 // Get stats
-export const getStats = async (req, res) => {
+const getStats = async (req, res) => {
   try {
-    const stats = await Stats.findOne(); // assuming only one document
+    const stats = await Stats.findOne();
+    if (!stats) {
+      return res.json({ members: 0, skills: 0, swaps: 0, rating: 0 });
+    }
     res.json(stats);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch stats" });
   }
 };
 
-// Update stats (if needed later for admin)
-export const updateStats = async (req, res) => {
+
+// Update stats
+const updateStats = async (req, res) => {
   try {
     const { members, skills, swaps, rating } = req.body;
     const stats = await Stats.findOneAndUpdate(
@@ -24,3 +28,5 @@ export const updateStats = async (req, res) => {
     res.status(500).json({ error: "Failed to update stats" });
   }
 };
+
+module.exports = { getStats, updateStats };
