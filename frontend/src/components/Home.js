@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import "./Home.css"; // Import the CSS file
 
 import Navbar from "./Navbar";
+import FeaturedSkills from "./FeaturedSkills";
+import Testimonial from "./Testimonials";
+import Footer from "./Footer";
 
 const Home = () => {
   const [stats, setStats] = useState({
@@ -87,6 +90,16 @@ const Home = () => {
         <p>Average Rating</p>
       </div>
     </section>
+    <FeaturedSkills />
+    <Testimonial />
+    <section className="cta-section">
+      <h2>Ready to Start Your Skill Journey?</h2>
+      <p>
+        Join thousands of learners and teachers in our vibrant community today
+      </p>
+      <button className="cta-btn">Get Started Now →</button>
+    </section>
+    <Footer />
     </div>
   );
 };

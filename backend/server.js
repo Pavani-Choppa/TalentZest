@@ -1,5 +1,8 @@
 // Entry point for Express server
 const statsRoutes = require("./routes/statsRoutes");
+const skillsRoutes = require("./routes/skillsRoutes");
+const testimonialRoutes = require("./routes/testimonialRoutes");
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -13,6 +16,9 @@ app.use(cors());
 
 // Routes
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/skills", skillsRoutes);
+app.use("/api/testimonials", testimonialRoutes);
+
 
 // Connect MongoDB
 mongoose.connect(process.env.MONGO_URI, {
