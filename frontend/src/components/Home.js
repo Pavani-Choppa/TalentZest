@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./Home.css"; // Import the CSS file
 
 import Navbar from "./Navbar";
@@ -97,7 +97,9 @@ const Home = () => {
       <p>
         Join thousands of learners and teachers in our vibrant community today
       </p>
-      <button className="cta-btn">Get Started Now →</button>
+      <Link to="/browse-skills" className="cta-btn">
+        Get Started Now →
+      </Link>
     </section>
     <Footer />
     </div>

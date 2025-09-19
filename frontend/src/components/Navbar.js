@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { FaHome, FaSearch, FaTachometerAlt, FaEnvelope } from "react-icons/fa";
 import "./Navbar.css"; // Import the CSS file
 import logo from "../assets/logo.png";
@@ -29,9 +30,9 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="/browse">
+          <Link to="/browse-skills">
             <img src={browse} alt="Browse Skills" className="icon" /> Browse Skills
-          </a>
+          </Link>
         </li>
         <li>
           <a href="/dashboard">
